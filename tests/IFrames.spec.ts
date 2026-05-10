@@ -16,10 +16,13 @@ test('Frames demo from demo.automationtesting.in', async ({ page }) => {
 
 
   // Locate the single iframe  -----find iframe tag in html tree
-  const singleFrame = page.frameLocator("#singleframe");
+  /const singleFrame = page.frameLocator("#singleframe");
+
+    
 
   // // Type text inside single iframe
-   await page.locator("[type='text']").fill("sai");
+   await page.locator("input[type='text']").click()
+   await page.locator("input[type='text']").fill("sai")
 
 
 

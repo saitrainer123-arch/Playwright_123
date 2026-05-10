@@ -16,7 +16,9 @@ test('Nested Frames demo from demo.automationtesting.in', async ({ page }) => {
     const innerFrame = outerFrame.frameLocator("iframe[src='SingleFrame.html']");
 
     // // Type text inside inner iframe
-    await innerFrame.locator("input[type='text']").fill("Rahul");
+    await innerFrame.locator("input[type='text']").fill("anji");
+
+    await page.waitForTimeout(3000)
 
     
 });

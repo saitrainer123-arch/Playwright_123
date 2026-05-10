@@ -7,17 +7,14 @@ test('Right click action', async ({ page }) => {
 
 
     // Locate the "right click me" button using XPath
-    const rightclickme = page.locator("//span[text()='right click me']");
+    const rightclickme = page.getByText("right click me")
 
+    await rightclickme.click({ button: 'right' })
 
-    await rightclickme.click({button:'right'});
+    const paste_ = page.getByText('Paste');
+    await paste_.click()
 
-     const paste_= page.getByText('Paste');
-     await paste_.click()
-
-
-
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
 
 
 

@@ -1,13 +1,15 @@
-import { test , expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
-test('Login ', async ({ page }) => {
+test('1username', async ({ page }) => {
+  await page.goto('https://www.facebook.com/');
+  
+  await page.getByPlaceholder("Username").fill("Saikumar")
 
-    await page.goto("https://www.saucedemo.com/")
-
-    
-    await page.waitForTimeout(3000)
+  await page.getByText("Email address or mobile number").fill("sai@gmail.com")
 
 
+  await page.waitForTimeout(3000)
 });
+
 
 

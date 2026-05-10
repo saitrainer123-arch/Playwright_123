@@ -7,11 +7,12 @@ test('mouse hover action', async ({ page }) => {
   // Launch the application
   await page.goto('https://demo.automationtesting.in/Register.html');
 
-  const Interaction_Emlnt = page.getByText("Interactions ");
-  await Interaction_Emlnt.hover();
 
-  const dragdrop_elmnt = page.getByText("Drag and Drop ");
-  await dragdrop_elmnt.hover();
+  const Interaction_Emlnt = page.getByText("Interactions ");
+  await Interaction_Emlnt.hover()
+
+   const dragdrop_elmnt = page.getByText("Drag and Drop ");
+   await dragdrop_elmnt.hover();
 
   await page.waitForTimeout(2000);
 

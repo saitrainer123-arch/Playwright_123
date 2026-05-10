@@ -7,7 +7,7 @@ test('Assertions', async ({ page }) => {
 
     // Locator for email / phone input field
     const emailField = page.locator('#email');
-
+ 
     // Assertion 1: Email field should be visible
     await expect(emailField).toBeVisible();
 

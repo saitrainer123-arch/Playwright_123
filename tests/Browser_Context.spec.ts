@@ -1,6 +1,6 @@
-import { test, expect, Browser, BrowserContext, Page, chromium } from '@playwright/test';
+import { test, expect, Browser, BrowserContext, Page, chromium, firefox } from '@playwright/test';
 
-test('Browser Context', async ({}) => {
+test('Browser Context', async ({ }) => {
 
   // STEP 1: Launch the browser (Chromium with Chrome channel)
   // headless: false → browser UI will be visible
@@ -36,9 +36,9 @@ test('Browser Context', async ({}) => {
 
   // STEP 7: Launch another browser instance
   // If you want Firefox, use: firefox.launch()
-  const browser1: Browser = await chromium.launch({
+  const browser1: Browser = await firefox.launch({
     headless: false,
-    channel: 'chrome'
+    channel: 'firefox'
   });
 
   // STEP 8: Create a new independent browser context
