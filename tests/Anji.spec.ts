@@ -9,6 +9,7 @@ test('OpenBrowser', async ({ page }) => {
     // this is for waiting time
     await page.waitForTimeout(3000)
 
+    await page.waitForTimeout(3000)
 
 })
 
