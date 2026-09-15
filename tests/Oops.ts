@@ -24,7 +24,8 @@ class TV {
 // Formula: const variable = new ClassName("value");
 
 // Creating object s1 and passing "Samsung" to constructor
-const s1 = new TV("Sumsung");
+const s1 = new TV("Lg");
+
 
 // Calling class method using object
 s1.tvcompany();   // Output: Sumsung

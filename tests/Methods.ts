@@ -1,15 +1,16 @@
-class Bike  {
+
+class Bike {
 
     //Declaride as a string
-    readonly color: string;
+    color: string;
     Bike_Number: number;
 
-    constructor(color: string, Bike_Number: number) {
+    constructor(color:string, Bike_Number: number) {
         //Intializing the string with
         this.color = color;
         this.Bike_Number = Bike_Number;
 
-    }
+     }
 
     showcolor() {
         console.log(this.color + " and the bike number is " + this.Bike_Number)
@@ -35,10 +36,7 @@ c.showcolor
 
 
 
-
-
-
-// class Bike {
+//class Bike {
 //     color: string;
 
 //     constructor(color: string) {

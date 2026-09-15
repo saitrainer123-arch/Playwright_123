@@ -1,28 +1,43 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 
-test('Handle Alert, Confirm and Prompt dialogs in one script', async ({ page }) => {
+test('JavaScript Alerts', async ({ page }) => {
 
-  // STEP 1: Launch the application
+  // Open website
   await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
+
+  // 1. JavaScript Alert
+  page.on('dialog', async dialog => {
+   await dialog.accept();
+  });
+
+  await page.getByRole('button', { name: 'Click for JS Alert' }).click();
+
   await page.waitForTimeout(3000)
 
-  // //alert---------------------------------------------------------------------------------
 
-  // Validate alert text  ---on --dialog is event for alearts
-  await page.getByText("Click for JS Alert").click()
-  
-  await page.on('dialog', async dialog => {
+  // await page.waitForTimeout(3000)
 
-    expect(dialog.message()).toContain
+  // await page.on('dialog', async dialog => {
+
+  //   expect(dialog.message()).toContain('I am a JS prompt')  //alert message
+
+  //  // await dialog.dismiss() //cancel
+  //   await dialog.accept("Hi this is Jockson")  //ok
+
+  // })
+  // await page.getByText("Click for JS Prompt").click()
 
 
-    //this is for popup cantain text
-    expect(dialog.message()).toContain('I am a JS Alert')
-    //this is for ok or accept the alert
-     await dialog.accept()
-    // await dialog.dismiss()
-    //await dialog.accept("Rahul")
-  })
+
+
+
+  //   //this is for popup cantain text
+  //  expect(dialog.message()).toContain('I am a JS Alert')
+  //   //this is for ok or accept the alert
+  //   await dialog.accept()
+  //   // await dialog.dismiss()
+  //   //await dialog.accept("Rahul")
+  // })
 
   // // For promt u should mention in the last
   // await page.getByText('Click for JS Prompt').click()
@@ -56,5 +71,5 @@ test('Handle Alert, Confirm and Prompt dialogs in one script', async ({ page }) 
 
   // await page.locator("//button[text()='Click for JS Prompt']").click()
 
-  await page.waitForTimeout(3000)
+
 })

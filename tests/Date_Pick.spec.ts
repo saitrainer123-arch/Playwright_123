@@ -6,16 +6,61 @@ test('Date picker', async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
 
 
-    // locate the calendar (date picker) input field
-    const calender = page.locator('#datepicker');
+    const dt = page.locator("#datepicker")
+
+    await dt.scrollIntoViewIfNeeded()
+
+    await dt.fill("01/01/2026")
+
+    await page.keyboard.press("Tab")
+
+    await page.waitForTimeout(2000)
+
+    await page.locator("#txtDate").fill("25/02/2026")
+
+    await page.waitForTimeout(4000)
 
 
-    await calender.scrollIntoViewIfNeeded()
 
-    //  enter the date into the calendar input field
-    await calender.fill("07-07-2022");
+    // const dp = page.locator("#datepicker");
 
-    await page.waitForTimeout(3000);
+    // await dp.scrollIntoViewIfNeeded()
+
+    // await dp.fill("02-02-2005")
+
+    // await page.keyboard.press("Tab")
+
+    // await page.waitForTimeout(2000)
+
+    // await page.keyboard.press("Tab")
+
+    // await page.waitForTimeout(2000)
+
+    // await page.keyboard.press("Tab")
+
+
+
+
+
+    // //is scroll to that date element
+    // await page.locator("#datepicker").scrollIntoViewIfNeeded();
+
+
+    // await page.locator("#datepicker").fill("01-01-2000")
+
+
+
+    // // locate the calendar (date picker) input field
+    // const calender = page.locator('#datepicker');
+
+    // await calender.scrollIntoViewIfNeeded()
+
+    // await calender.fill("05-05-2023")
+
+    // // //  enter the date into the calendar input field
+    // // await calender.fill("07-07-2022");
+
+    await page.waitForTimeout(5000);
 
 
 })

@@ -1,17 +1,19 @@
-class User {
-  userId: number;
-  name: string;
+class Student {
 
-  constructor(userId: number, name: string) {
-    this.userId = userId;
+  readonly name: string;
+
+  constructor(name: string) {
     this.name = name;
   }
 }
 
-const user1 = new User(112, "Suresh");
+const st = new Student("Sai");
 
-user1.name= "Ganesh"
-user1.name = "Ramesh";   // ✅ allowed
+console.log(st.name)
+st.name = "amoju"
+console.log(st.name)
 
 
-user1.userId = 2;        // ❌ not allowed
+//console.log(student.name); // Sai
+
+// student.name = "Ravi"; // ❌ Error: Cannot assign to 'name' because it is a read-only property.

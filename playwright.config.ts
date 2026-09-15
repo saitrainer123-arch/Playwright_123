@@ -29,9 +29,9 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    // screenshot: 'only-on-failure',
     video: 'on',
-    trace: 'on',
+    screenshot:'only-on-failure',
+    trace: 'on'
   },
 
   /* Configure projects for major browsers */
@@ -51,14 +51,24 @@ export default defineConfig({
     //   use: { ...devices['Desktop Safari'] },
     // },
 
-    /* Test against mobile viewports. */
-    //  {
+    // /* Test against mobile viewports. */
+    // {
     //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
+    //   use: { ...devices['iPad (gen 6)'] },
+    // },
+
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Galaxy S9+'] },
+    // },
+
+    // {
+    //   name: 'Mobile Safari',
+    //   use: { ...devices['iPhone 12 Pro Max'] },
     // },
     // {
     //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
+    //   use: { ...devices['Blackberry PlayBook'] },
     // },
 
     /* Test against branded browsers. */

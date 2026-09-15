@@ -8,7 +8,27 @@
   "main": "hello.js",
   "scripts": {},
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0"
-  }
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^25.9.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "axios": "^1.18.1",
+    "playwright": "^1.61.1",
+    "xlsx": "^0.18.5"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saitrainer123-arch/Playwrite_Git.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/saitrainer123-arch/Playwrite_Git/issues"
+  },
+  "homepage": "https://github.com/saitrainer123-arch/Playwrite_Git#readme"
 }

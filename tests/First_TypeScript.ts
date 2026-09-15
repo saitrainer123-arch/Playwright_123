@@ -1,2 +1,7 @@
+ console.log("Hi this is Manoj")
 
-    console.log("Hello Saikumar")
+
+// let StudentN:string ="saikumar"
+// let rnk:number=26;
+
+// console.log(StudentN+" Rank is "+rnk)

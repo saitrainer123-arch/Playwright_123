@@ -6,15 +6,93 @@ test('Right click action', async ({ page }) => {
     await page.goto('https://demo.guru99.com/test/simple_context_menu.html');
 
 
-    // Locate the "right click me" button using XPath
-    const rightclickme = page.getByText("right click me")
 
-    await rightclickme.click({ button: 'right' })
+    await page.getByText("right click me").click({ button: 'right' })
 
-    const paste_ = page.getByText('Paste');
-    await paste_.click()
+    await page.waitForTimeout(4000)
 
-    await page.waitForTimeout(3000);
+    await page.getByText("Paste").click()
+
+    await page.waitForTimeout(4000)
+
+
+
+
+
+
+
+
+    // await page.getByText("right click me").click({ button: 'right' })
+
+    // await page.waitForTimeout(3000)
+
+    // await page.getByText('Paste').click()
+
+
+    // await page.waitForTimeout(2000)
+
+    // await page.getByText("Paste").click()
+
+
+    // await page.getByText("right click me").click({button:'right'})
+
+
+
+    // await page.getByText("Paste").click()
+
+
+
+
+
+
+
+
+    // await page.getByText("right click me").click({ button: 'right' })
+
+    // await page.getByText("Paste").click()
+
+
+
+
+
+
+
+    // const rck = page.getByText("right click me")
+
+    // await rck.click({ button: 'right' })
+
+    // await page.getByText("Paste").click()
+
+
+
+
+
+    // const rc = page.getByText("right click me");
+
+    // await rc.click({ button: 'right' })
+
+    // const ps = page.getByText("Paste")
+    // ps.click()
+    //await page.waitForTimeout(5000);
+
+
+
+
+
+
+
+
+
+
+    // // Locate the "right click me" button using XPath
+    // const rightclickme = page.getByText("right click me")
+
+    // await rightclickme.click({ button: 'right' })
+
+    // const paste_ = page.getByText('Paste');
+    // await paste_.click()
+
+    // await page.waitForTimeout(3000);
 
 
 
@@ -36,5 +114,5 @@ test('Right click action', async ({ page }) => {
     // // Click on the "Paste" option from the right-click menu
     // await page.locator("//span[text()='Paste']").click();
 
-    await page.waitForTimeout(2000);
+    //await page.waitForTimeout(2000);
 });

@@ -2,13 +2,24 @@ import { test } from '@playwright/test';
 
 test('Screen Shots', async ({ page }) => {
 
-    await page.goto("https://demo.guru99.com/test/newtours/")
+    await page.goto("https://www.saucedemo.com/")
+
+
+    await page.getByRole('button',{name:"Login"}).screenshot({path:'jockson.png'})
+
+    // await page.getByPlaceholder("").fill("")
+    // await page.locator("#").fill("")
+    // await page.getByRole('button',{name:""});
+
+    //await page.screenshot({path:'akhil.png'})
 
 
    // 1.Screenshot image and saves in playwright
-   await page.screenshot({path:'ranjith.png'})
+  // await page.screenshot({path:'ranjith.png'})
 
-   await page.locator("//input[@name='submit']").screenshot({path:'submitpic.png'})
+  //await page.locator("[name='userName']").screenshot({path:'venky1.png'})
+
+   //await page.locator("[name='submit']").screenshot({path:'submitbuttonpic.png'})
 
 
 

@@ -1,42 +1,65 @@
 import { test, expect } from '@playwright/test';
 
-// It will run before every test
 test.beforeEach(async ({ page }) => {
     await page.goto("https://www.saucedemo.com/")
     await page.waitForTimeout(5000)
 })
-// It will run after every test
+
+// // // It will run after every test
 test.afterEach(async ({ page }) => {
+
     await page.locator("#login-button").click()
     await page.waitForTimeout(5000)
+
 })
-// It will run only beforeall  tests
+
+//Before all 
 test.beforeAll(async () => {
-    console.log("Program is Strated")
+
+    console.log("The testing is strated")
 
 })
-// It will run only Afterall  tests
 test.afterAll(async () => {
-    console.log("Program is Exicuted Sucessfully")
+
+    console.log("The testing is Ended")
 
 })
 
-test('TestCase 1', async ({ page }) => {
 
-    await page.getByPlaceholder('Username').fill('sai')
+test('UserName1', async ({ page }) => {
+
+    await page.getByPlaceholder('Username').fill('Naveen')
+
+    await page.waitForTimeout(5000)
+
+    console.log("UserName1 is tested")
+
+})
+
+test('UserName2', async ({ page }) => {
+
+
+    await page.getByPlaceholder('Username').fill('Ram')
+    console.log("UserName2 is tested")
+
+    await page.waitForTimeout(5000)
+})
+test('UserName3', async ({ page }) => {
+
+    await page.getByPlaceholder('Username').fill('Sridhar')
+
+    await page.waitForTimeout(5000)
+    console.log("UserName3 is tested")
+
+})
+test('UserName4', async ({ page }) => {
+
+    await page.getByPlaceholder('Username').fill('Sai')
+
+    console.log("UserName4 is tested")
 
     await page.waitForTimeout(5000)
 
 })
-test('TestCase 2', async ({ page }) => {
 
-    await page.getByPlaceholder('Username').fill('kumar')
-    await page.waitForTimeout(5000)
 
-})
-test('TestCase 3', async ({ page }) => {
-    await page.getByPlaceholder('Username').fill('Tarun')
-
-    await page.waitForTimeout(5000)
-
-})
