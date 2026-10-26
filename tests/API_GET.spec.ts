@@ -1,20 +1,40 @@
 import { test, expect } from '@playwright/test';
 
-// Test case: Verify GET API returns correct user data
+// We use request fixture for API testing
 test('GET user data', async ({ request }) => {
 
-  const ud = await request.get("https://jsonplaceholder.typicode.com/posts/12")
+  // we are using get()method to get the data
+ const username = await request.get("https://jsonplaceholder.typicode.com/posts/10")
 
-  //Status =200
-  console.log("Status :- "+ ud.status())
+  console.log("Status is :- "+ username.status())
 
-  //Converting to json()
-   const userdata=  await ud.json()
+     //Converting to json()
+   const ud_= await username.json()
 
-   console.log("Full Data",userdata)
+   console.log("Complete data ",ud_)
 
 
 })
+
+
+
+
+
+// Test case: Verify GET API returns correct user data
+// test('GET user data', async ({ request }) => {
+
+//   const ud = await request.get("https://jsonplaceholder.typicode.com/posts/12")
+
+//   //Status =200
+//   console.log("Status :- "+ ud.status())
+
+//   //Converting to json()
+//    const userdata=  await ud.json()
+
+//    console.log("Full Data",userdata)
+
+
+// })
 
 
 

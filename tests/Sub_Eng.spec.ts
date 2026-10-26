@@ -5,15 +5,18 @@ test('Select Subject English', async ({ page }) => {
   // Open DemoQA form
   await page.goto('https://demoqa.com/automation-practice-form');
 
+  const s = page.locator("#subjectsInput")
 
-  const subject_ = page.locator("#subjectsInput")
-
-  await subject_.fill("Eng")
-
-  await page.waitForTimeout(3000)
+  await s.fill("comm")
 
   await page.keyboard.press("Enter")
 
+  await page.keyboard.press("Tab")
+
+  await page.waitForTimeout(2000)
+
+  await page.keyboard.press("Tab")
+
   await page.waitForTimeout(2000)
 
   await page.keyboard.press("Tab")
@@ -21,6 +24,29 @@ test('Select Subject English', async ({ page }) => {
   await page.waitForTimeout(2000)
 
   await page.keyboard.press("Tab")
+
+  await page.waitForTimeout(4000)
+
+
+
+
+
+
+  // const subject_ = page.locator("#subjectsInput")
+
+  // await subject_.fill("Eng")
+
+  // await page.waitForTimeout(3000)
+
+  // await page.keyboard.press("Enter")
+
+  // await page.waitForTimeout(2000)
+
+  // await page.keyboard.press("Tab")
+
+  // await page.waitForTimeout(2000)
+
+  // await page.keyboard.press("Tab")
 
 
 

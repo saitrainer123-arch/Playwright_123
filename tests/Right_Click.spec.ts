@@ -6,14 +6,28 @@ test('Right click action', async ({ page }) => {
     await page.goto('https://demo.guru99.com/test/simple_context_menu.html');
 
 
-
-    await page.getByText("right click me").click({ button: 'right' })
+    await page.getByText("right click me").click({button:'right'})
 
     await page.waitForTimeout(4000)
 
     await page.getByText("Paste").click()
 
-    await page.waitForTimeout(4000)
+
+
+
+
+
+
+
+
+
+    // await page.getByText("right click me").click({ button: 'right' })
+
+    // await page.waitForTimeout(4000)
+
+    // await page.getByText("Paste").click()
+
+    // await page.waitForTimeout(4000)
 
 
 

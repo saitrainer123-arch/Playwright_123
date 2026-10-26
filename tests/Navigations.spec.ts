@@ -2,22 +2,18 @@ import { test, chromium } from '@playwright/test';
 
 test('Navigate back and forward example', async ({ page }) => {
 
-
     await page.goto("https://www.flipkart.com/")
 
-    await page.waitForTimeout(3000)
+    await page.waitForTimeout(4000)
 
-    await page.goto("https://www.amazon.in/")
+    await page.goto("https://www.myntra.com/")
 
-    //Amezon to Flifcart
     await page.goBack()
 
-    await page.waitForTimeout(3000)
+    await page.waitForTimeout(4000)
 
-    //Flifcart to amezon
     await page.goForward()
 
-    await page.waitForTimeout(3000)
 
 
 

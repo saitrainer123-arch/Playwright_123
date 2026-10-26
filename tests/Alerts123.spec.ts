@@ -7,7 +7,6 @@ test('JavaScript Alerts', async ({ page }) => {
 
 
 
-
     //For alrerts
     page.on('dialog', async dialog => {
 
@@ -22,7 +21,7 @@ test('JavaScript Alerts', async ({ page }) => {
 
     await page.waitForTimeout(4000)
 
-
+})
 
 
     // // 1. JavaScript Alert
@@ -49,6 +48,6 @@ test('JavaScript Alerts', async ({ page }) => {
 
     //  await page.getByRole('button', { name: 'Click for JS Prompt' }).click();
 
-    await page.waitForTimeout(4000)
+//     await page.waitForTimeout(4000)
 
-});
+// });

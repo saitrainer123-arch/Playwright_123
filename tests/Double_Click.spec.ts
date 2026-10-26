@@ -5,13 +5,20 @@ test('Double click example', async ({ page }) => {
   await page.goto("https://testautomationpractice.blogspot.com/")
 
 
-  await page.getByRole('button', { name: "Copy Text" }).dblclick();
-  
-
-  await page.waitForTimeout(4000)
+  await page.getByRole('button', { name: 'Copy Text' }).dblclick()
 
 
+  await page.waitForTimeout(3000)
 
+
+
+
+
+
+
+  // await page.getByRole('button',{name:'Copy Text'}).dblclick()
+
+  // await page.waitForTimeout(4000)
 
 
 

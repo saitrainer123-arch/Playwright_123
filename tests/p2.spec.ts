@@ -1,49 +1,37 @@
-import { test, expect } from '@playwright/test';
+import {test,expect} from '@playwright/test'
 
-test('Test', async ({ page }) => {
 
-  //Open The Url
-  await page.goto('https://www.saucedemo.com/');
 
-  await page.getByRole('textbox', { name: "Username" }).fill("standard_user")
+test('UserName1', async ({ page }) => {
+    await page.goto("https://www.saucedemo.com/")
+    await page.getByPlaceholder('Username').fill('Govind')
+    await page.waitForTimeout(3000)
 
-  await page.getByPlaceholder("Password").fill("secret_sauce")
+})
 
-  await page.locator("#login-button").click()
+test('UserName2', async ({ page }) => {
+    await page.goto("https://www.saucedemo.com/")
+    await page.getByPlaceholder('Username').fill('Gopinath')
+    await page.waitForTimeout(3000)
+})
 
-  await page.waitForTimeout(4000)
 
-  await page.locator("#add-to-cart-sauce-labs-backpack").click()
 
-  await page.waitForTimeout(3000)
+test('UserName3', async ({ page }) => {
+    await page.goto("https://www.saucedemo.com/")
+    await page.getByPlaceholder('Username').fill('nagesh')
+    await page.waitForTimeout(3000)
+})
 
-  await page.locator("#add-to-cart-sauce-labs-bolt-t-shirt").click()
+test('UserName4', async ({ page }) => {
+    await page.goto("https://www.saucedemo.com/")
+    await page.getByPlaceholder('Username').fill('Rajesh')
 
-  await page.waitForTimeout(3000)
+    await page.waitForTimeout(3000)
+})
+test('UserName5', async ({ page }) => {
+    await page.goto("https://www.saucedemo.com/")
+    await page.getByPlaceholder('Username').fill('Sai')
 
-  await page.locator("#shopping_cart_container").click()
-
-  await page.waitForTimeout(3000)
-
-  await page.getByRole('button', { name: 'Checkout' }).click()
-
-  await page.getByRole('textbox', { name: 'First Name' }).fill("Praveen")
-
-  await page.getByRole('textbox', { name: 'Last Name' }).fill("Kumar")
-
-  await page.getByRole('textbox', { name: 'Zip/Postal Code' }).fill("500072")
-
-  await page.getByRole('button', { name: 'Continue' }).click()
-
-  await page.waitForTimeout(4000)
-
-  await page.getByRole('button', { name: 'Finish' }).click()
-
-  await page.waitForTimeout(3000)
-
-  await page.locator("#generate-pdf-order").click()
-
-  await page.waitForTimeout(10000)
-
-});
-
+    await page.waitForTimeout(3000)
+})

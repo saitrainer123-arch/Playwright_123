@@ -4,50 +4,90 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../Pages/LoginPageFile';
 
 
-test('valid login', async ({ page }) => {
+test('Verify Valid Login', async ({ page }) => {
 
-  //object_Formula ---const variable = new classname(page);
-  const loginPage = new LoginPage(page);
+  const lg = new LoginPage(page)
+  lg.gotourl()
+  lg.VerifyLoginFunctionality('standard_user','secret_sauce')
+  await page.waitForTimeout(3000)
 
-  loginPage.gotourl()
-  loginPage.VerifyUsername("standard_user","secret_sauce")
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// test('valid login', async ({ page }) => {
+
+//   //object_Formula ---const variable = new classname(page);
+//   const loginPage = new LoginPage(page);
+
+//   loginPage.gotourl()
+//   loginPage.VerifyUsername("standard_user","secret_sauce")
  
-  await page.waitForTimeout(3000)
+//   await page.waitForTimeout(3000)
 
-});
-test('valid username and invaild password', async ({ page }) => {
+// });
+// test('valid username and invaild password', async ({ page }) => {
 
-  //object_Formula ---const variable = new classname(page);
-  const loginPage = new LoginPage(page);
+//   //object_Formula ---const variable = new classname(page);
+//   const loginPage = new LoginPage(page);
 
-  loginPage.gotourl()
-  loginPage.VerifyUsername("standard_user","656689968")
+//   loginPage.gotourl()
+//   loginPage.VerifyUsername("standard_user","656689968")
 
-  await page.waitForTimeout(3000)
+//   await page.waitForTimeout(3000)
 
-});
-test('invalid username and vaild password', async ({ page }) => {
+// });
+// test('invalid username and vaild password', async ({ page }) => {
 
-  //object_Formula ---const variable = new classname(page);
-  const loginPage = new LoginPage(page);
+//   //object_Formula ---const variable = new classname(page);
+//   const loginPage = new LoginPage(page);
 
-  loginPage.gotourl()
-  loginPage.VerifyUsername("sai","secret_sauce")
+//   loginPage.gotourl()
+//   loginPage.VerifyUsername("sai","secret_sauce")
 
-  await page.waitForTimeout(3000)
+//   await page.waitForTimeout(3000)
 
-});
-test('Both Inviald', async ({ page }) => {
+// });
+// test('Both Inviald', async ({ page }) => {
 
-  //object_Formula ---const variable = new classname(page);
-  const loginPage = new LoginPage(page);
+//   //object_Formula ---const variable = new classname(page);
+//   const loginPage = new LoginPage(page);
 
-  loginPage.gotourl()
-  loginPage.VerifyUsername("sai","56586865")
+//   loginPage.gotourl()
+//   loginPage.VerifyUsername("sai","56586865")
 
-  await page.waitForTimeout(3000)
+//   await page.waitForTimeout(3000)
 
-});
+// });
 
 
 

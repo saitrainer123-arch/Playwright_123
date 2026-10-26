@@ -1,56 +1,68 @@
 import { test, expect } from '@playwright/test';
 
-// This is inside the Group One
-test.describe("Group One", async () =>{
-  test('Open Amezon', async ({ page }) => {
 
-    await page.goto("https://www.amazon.in/")
-    await page.waitForTimeout(3000)
+test.describe('Group 1', () => {
 
-  })
+test('UserName1', async ({ page }) => {
 
-  test('fb', async ({ page }) => {
+    await page.goto("https://www.saucedemo.com/")
+    
+    const u1 = page.getByPlaceholder('Username')
 
-    await page.goto("https://www.facebook.com/")
-    await page.waitForTimeout(3000)
+    await u1.fill("Praveen")
 
-  })
-
-
-  test('Flifcart', async ({ page }) => {
-
-    await page.goto("https://www.flipkart.com/")
-    await page.waitForTimeout(3000)
-
-
-  })
+    await expect(u1).toHaveValue("Praveen")
 
 })
 
-test.describe("Group Two", async () => {
-  test('redbus', async ({ page }) => {
+test('UserName2', async ({ page }) => {
 
-    await page.goto("https://www.redbus.in/")
-    await page.waitForTimeout(3000)
+    await page.goto("https://www.saucedemo.com/")
+    
+    const u1 = page.getByPlaceholder('Username')
 
+    await u1.fill("Nagaraj")
 
-  })
-   test('redbus1', async ({ page }) => {
+    await expect(u1).toHaveValue("Nagaraj")
 
-    await page.goto("https://www.redbus.in/")
-    await page.waitForTimeout(3000)
+})
+})
 
+test.skip('Group 2', () => {
+test('UserName3', async ({ page }) => {
 
-  })
-   test('redbus2', async ({ page }) => {
+    await page.goto("https://www.saucedemo.com/")
+    
+    const u1 = page.getByPlaceholder('Username')
 
-    await page.goto("https://www.redbus.in/")
-    await page.waitForTimeout(3000)
+    await u1.fill("venkanna")
 
+    await expect(u1).toHaveValue("venkanna")
 
-  })
+})
+test('UserName4', async ({ page }) => {
 
+    await page.goto("https://www.saucedemo.com/")
+    
+    const u1 = page.getByPlaceholder('Username')
 
+    await u1.fill("Sai")
+
+    await expect(u1).toHaveValue("Praveen")
+
+})
+test('UserName5', async ({ page }) => {
+
+    await page.goto("https://www.saucedemo.com/")
+    
+    const u1 = page.getByPlaceholder('Username')
+
+    await u1.fill("Anil")
+
+    await expect(u1).toHaveValue("Praveen")
+
+})
 
 
 })
+

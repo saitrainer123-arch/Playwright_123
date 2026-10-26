@@ -6,21 +6,48 @@ test('Dropdown validation', async ({ page }) => {
 
   //await page.setViewportSize({width:1920,height:1080});
 
-
   // Step 1: Open application
   await page.goto('https://testautomationpractice.blogspot.com/');
 
-  const cn_ = page.locator("#country");
+  const contry_options = page.locator("#country")
 
-  await cn_.scrollIntoViewIfNeeded()
+  await contry_options.scrollIntoViewIfNeeded()
 
-  await page.waitForTimeout(4000)
+  //await contry_options.selectOption("India")
 
-  await cn_.selectOption("India")
+  await contry_options.selectOption({ index:1})
 
-  await page.waitForTimeout(4000)
+  await page.waitForTimeout(5000)
 
-  await cn_.selectOption({ index: 2 })  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // const cn_ = page.locator("#country");
+
+  // await cn_.scrollIntoViewIfNeeded()
+
+  // await page.waitForTimeout(4000)
+
+  // await cn_.selectOption("India")
+
+  // await page.waitForTimeout(4000)
+
+  // await cn_.selectOption({ index: 2 })  
 
 
 
@@ -132,7 +159,7 @@ test('Dropdown validation', async ({ page }) => {
   //           .filter({ hasText: 'English' })
   //           .click();
 
-  await page.waitForTimeout(5000);
+  // await page.waitForTimeout(5000);
 
 });
 

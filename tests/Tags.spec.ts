@@ -5,15 +5,15 @@ import { test } from '@playwright/test';
 // This test just prints a message
 // --------------------------------------
 test('@fast Test 1', async () => {
-  console.log('Test 1');
+  console.log('Sai');
 });
 
 // --------------------------------------
 // Another @fast test
 // Multiple tests can have the same tag
 // --------------------------------------
-test('@fast Test 2', async () => {
-  console.log('Test 2');
+test('@slow Test 2', async () => {
+  console.log('Nagaraj');
 });
 
 // --------------------------------------
@@ -22,5 +22,5 @@ test('@fast Test 2', async () => {
 // @vrt  → Visual Regression Test (example tag)
 // --------------------------------------
 test('@slow @vrt Test 3', async () => {
-  console.log('Test 3');
+  console.log('Praveen');
 });

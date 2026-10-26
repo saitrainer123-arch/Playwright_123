@@ -1,6 +1,6 @@
 class Student {
 
-  readonly name: string;
+   readonly name: string;
 
   constructor(name: string) {
     this.name = name;
@@ -12,6 +12,10 @@ const st = new Student("Sai");
 console.log(st.name)
 st.name = "amoju"
 console.log(st.name)
+st.name="sai"
+
+
+
 
 
 //console.log(student.name); // Sai

@@ -1,22 +1,43 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Locator } from '@playwright/test';
 
 test('mouse hover action', async ({ page }) => {
 
   // Launch the application
   await page.goto('https://demo.automationtesting.in/Register.html');
 
+  const int = page.getByText("Interactions ")
 
-  await page.getByText("Interactions ").hover()
+  await int.hover()
 
-   await page.waitForTimeout(2000)
 
-  await page.getByText("Drag and Drop ").hover()
+  await page.waitForTimeout(3000)
 
-  await page.waitForTimeout(2000)
+  
 
-  await page.getByText("Static ").hover()
 
-  await page.waitForTimeout(5000)
+
+
+
+
+
+
+
+
+
+
+
+
+  // await page.getByText("Interactions ").hover()
+
+  //  await page.waitForTimeout(2000)
+
+  // await page.getByText("Drag and Drop ").hover()
+
+  // await page.waitForTimeout(2000)
+
+  // await page.getByText("Static ").hover()
+
+  // await page.waitForTimeout(5000)
 
 
 

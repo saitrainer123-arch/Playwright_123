@@ -5,14 +5,35 @@ test('Drag and Drop', async ({ page }) => {
     await page.goto('https://testautomationpractice.blogspot.com/')
 
 
+    const s = page.locator("#draggable")
 
-    const source__ = page.locator("#draggable")
+    const t = page.locator("#droppable")
 
-    const target__ = page.locator("#droppable")
+    await s.dragTo(t)
 
-    await source__.dragTo(target__)
 
-    await page.waitForTimeout(5000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const source__ = page.locator("#draggable")
+
+    // const target__ = page.locator("#droppable")
+
+    // await source__.dragTo(target__)
+
+    // await page.waitForTimeout(5000)
 
 
 

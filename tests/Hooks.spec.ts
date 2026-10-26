@@ -5,61 +5,52 @@ test.beforeEach(async ({ page }) => {
     await page.waitForTimeout(5000)
 })
 
-// // // It will run after every test
-test.afterEach(async ({ page }) => {
+// // // // It will run after every test
+// test.afterEach(async ({ page }) => {
 
-    await page.locator("#login-button").click()
-    await page.waitForTimeout(5000)
+//     await page.locator("#login-button").click()
+//     await page.waitForTimeout(5000)
 
-})
+// })
 
-//Before all 
-test.beforeAll(async () => {
+// //Before all 
+// test.beforeAll(async () => {
 
-    console.log("The testing is strated")
+//     console.log("The testing is strated")
 
-})
-test.afterAll(async () => {
+// })
+// test.afterAll(async () => {
 
-    console.log("The testing is Ended")
+//     console.log("The testing is Ended")
 
-})
+// })
 
 
 test('UserName1', async ({ page }) => {
 
-    await page.getByPlaceholder('Username').fill('Naveen')
+ 
 
-    await page.waitForTimeout(5000)
-
-    console.log("UserName1 is tested")
+    await page.getByPlaceholder('Username').fill('Govind')
+   
 
 })
 
 test('UserName2', async ({ page }) => {
 
+    await page.getByPlaceholder('Username').fill('Gopinath')
 
-    await page.getByPlaceholder('Username').fill('Ram')
-    console.log("UserName2 is tested")
 
-    await page.waitForTimeout(5000)
 })
+
 test('UserName3', async ({ page }) => {
 
-    await page.getByPlaceholder('Username').fill('Sridhar')
-
-    await page.waitForTimeout(5000)
-    console.log("UserName3 is tested")
+    await page.getByPlaceholder('Username').fill('nagesh')
 
 })
+
 test('UserName4', async ({ page }) => {
 
-    await page.getByPlaceholder('Username').fill('Sai')
+    await page.getByPlaceholder('Username').fill('Rajesh')
 
-    console.log("UserName4 is tested")
-
-    await page.waitForTimeout(5000)
 
 })
-
-

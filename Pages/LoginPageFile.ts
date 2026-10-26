@@ -11,7 +11,6 @@ export class LoginPage {
   readonly password: Locator;
   readonly loginButton: Locator;
 
-
   //intialize
   constructor(page: Page) {
     this.page = page;
@@ -27,7 +26,7 @@ export class LoginPage {
 
   }
 
-  async VerifyUsername(user: string,password:string) {
+  async VerifyLoginFunctionality(user: string, password: string) {
 
     await this.username.fill(user)
     await this.password.fill(password)
@@ -35,7 +34,21 @@ export class LoginPage {
 
   }
 
- 
+
+
+
+
+
+
+  // async VerifyUsername(user: string, password: string) {
+
+  //   await this.username.fill(user)
+  //   await this.password.fill(password)
+  //   await this.loginButton.click()
+
+  // }
+
+
 
 
 

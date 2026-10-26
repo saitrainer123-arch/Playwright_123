@@ -5,19 +5,45 @@ test('Assertions', async ({ page }) => {
     // Step 1: Launch page
     await page.goto('https://testautomationpractice.blogspot.com/');
 
-    const nf = await page.getByPlaceholder("Enter Name")
+    const e = page.getByRole('textbox', { name: 'Enter name' })
 
-    //  await nf.fill("Nagaraju")
+    await e.fill("Gopi")
 
-    // expect(value).assertion()
+    //expect(locator).assertion
+    await expect.soft(e).toBeEmpty()
 
-    await expect(nf).toBeEmpty()
+    await expect(e).toBeEditable()
 
-    await expect(nf).toBeEditable()
+    await expect(e).toBeVisible()
 
-    await expect(nf).toBeVisible()
+    await expect(e).toHaveValue("Gopi")
 
-    await page.waitForTimeout(2000)
+    //await expect(page).toHaveURL("https://testautomationpractice.blogspot.com/")
+
+
+    await page.waitForTimeout(3000)
+
+
+
+
+
+
+
+
+
+
+
+    // //  await nf.fill("Nagaraju")
+
+    // // expect(value).assertion()
+
+    // await expect(nf).toBeEmpty()
+
+    // await expect(nf).toBeEditable()
+
+    // await expect(nf).toBeVisible()
+
+    // await page.waitForTimeout(2000)
 
 
 
@@ -47,7 +73,7 @@ test('Assertions', async ({ page }) => {
 
     // await expect(nmf).toHaveAttribute('placeholder', 'Enter Name')
 
-     await expect(page).toHaveURL("https://testautomationpractice.blogspot.com/")
+    //await expect(page).toHaveURL("https://testautomationpractice.blogspot.com/")
 
 
 

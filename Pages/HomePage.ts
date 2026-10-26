@@ -24,7 +24,7 @@ export class HomePage {
 
     async Veriefy_Sauce_Labs_Bolt_Button() {
 
-        await this.Sauce_Labs_Bolt.click()
+       // await this.Sauce_Labs_Bolt.click()
 
     }
 
